@@ -9,7 +9,10 @@
   },
   "dependencies": {
     "core-js": "^3.6.5",
-    "vue": "^2.6.11"
+    "husky": "^8.0.2",
+    "lint-staged": "^13.1.0",
+    "vue": "^2.6.11",
+    "vuex": "3.6.2"
   },
   "devDependencies": {
     "@vue/cli-plugin-babel": "~4.5.0",
@@ -19,6 +22,13 @@
     "eslint": "^6.7.2",
     "eslint-plugin-vue": "^6.2.2",
     "vue-template-compiler": "^2.6.11"
+  },
+  "lint-staged": {
+    "src/**/*.{js,vue}": [
+      "prettier --write",
+      "eslint --fix",
+      "git add"
+    ]
   },
   "eslintConfig": {
     "root": true,
